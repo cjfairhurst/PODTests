@@ -4,7 +4,7 @@ phases:
     commands:
     - $(aws ecr get-login --no-include-email)
     - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
-    - IMAGE_URI="cf-springboot:${TAG}"
+    - IMAGE_URI="cf-sp-repos-1rzo4st5w6em8:${TAG}"
   build:
     commands:
     - docker build --tag "$IMAGE_URI" .
